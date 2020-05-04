@@ -1,6 +1,14 @@
-contador = 0
+getend passwd test > /dev/null 2$>1
+echo $?
 
-read -p "introduce un nombre de usuario: " nombre
-echo "el nombre introducido es $nombre"
+getend passwd test1 > /dev/null/ 2$>1
+echo $?
 
-if[ $nombre1 != $nombre2]
+getend passwd $1 > /dev/null 2$>1
+if [$? -eq 0 ]
+then
+echo "El usurario existe"
+else 
+echo "el usurario no existe"
+fi
+
